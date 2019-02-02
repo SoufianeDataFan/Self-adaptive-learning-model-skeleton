@@ -4,7 +4,7 @@
  
 ```
 if __name__ == "__main__":
-    INPUT_DIR='/path/to/directory/' # directory of the inputs data 
+    INPUT_DIR='/path/to/inputs/directory/' # directory of the inputs data 
     os.chdir(INPUT_DIR)
     with timer("Full model run"):
         main(self_tuning= True) 
