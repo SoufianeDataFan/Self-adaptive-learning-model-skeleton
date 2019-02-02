@@ -367,9 +367,9 @@ def train_single_classifier(params):   # train "optimal" model after hyperparams
 # -----------------------------------------------------------------------------
 
 
-def main(run_param_tuning = False):
+def main(self_tuning = False):
     X_train, X_val, y_train, y_val, test= get_data(True)
-    if(run_param_tuning):
+    if(self_tuning):
         with timer("XGboost: Paramters tuning with Random optimization"):
             best_hyperparams = optimize(random_state=1235)
             print("The best hyperparameters are: ", "\n")
@@ -410,6 +410,6 @@ if __name__ == "__main__":
     INPUT_DIR='/path/to/directory/' # directory of the inputs data 
     os.chdir(INPUT_DIR)
     with timer("Full model run"):
-        main(run_param_tuning= True)
+        main(self_tuning= True)
         
         
