@@ -28,7 +28,7 @@ if __name__ == "__main__":
 Interruption of connectivity can happen due to the failure of some nodes in a telecommunication network. Ensuring reliable network connectivity is curial for these companies since it can harm their brand if it happens repetitively. 
 For this purpose, the engineers should conduct preventive maintenance actions on different nodes of the network that are spread on an expansive area. 
 
-The challenge for the maintenance engineers is to prioritize the nodes with the highest fault severity level 1, 2, or 3 (imagine these nodes are in different locations). 
+The challenge here for the maintenance managers is to prioritize the nodes with the highest fault severity level 1, 2, or 3 (imagine these nodes are in different locations, it's very time consuming). 
 
 This is a multi-class problem with a tricky dataset (The meaning of the features is not easily clear from the beginning unless you are experienced in the field). 
 
