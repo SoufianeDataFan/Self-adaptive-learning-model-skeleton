@@ -40,5 +40,5 @@ This a great classifier with a single model with automatic tuning pipeline and s
 
 ## Dataset: 
 
-[Link](https://www.kaggle.com/c/telstra-recruiting-network/data/).
+[Go to repository ](https://www.kaggle.com/c/telstra-recruiting-network/data/).
 
