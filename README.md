@@ -26,13 +26,13 @@ if __name__ == "__main__":
 ## Business perspective:
 
 Interruption of connectivity can happen due to the failure of some nodes in a telecommunication network. Ensuring reliable network connectivity is curial since it can harm the brand of the company if it happens repetitively. 
-For this purpose, the engineers should conduct preventive maintenance actions on different nodes of the network that are spread on an expansive area. 
+For this purpose, maintenance engineers must conduct preventive actions periodically on different nodes of the network that are spread out throughout an expansive area. Tasks prioritatzation is a key here !
 
 The challenge here for the maintenance managers is to prioritize the nodes with the highest fault severity level 1, 2, or 3 (imagine these nodes are in different locations, it's very time consuming). 
 
 This is a multi-class problem with a tricky dataset (The meaning of the features is not easily clear from the beginning unless you are experienced in the field). 
 
-This a great classifier with a single model with automatic tuning pipeline and some features engineering techniques. 
+This is a great classifier with a single model and automatic tuning pipeline and some features engineering techniques. 
 
 
 
