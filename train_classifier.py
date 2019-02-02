@@ -28,26 +28,24 @@ warnings.filterwarnings("ignore")
     
     
     
-
-# Scoring and optimization functions
-
-
 # ----------
-# Data_Prep
+# Data_Prep 
 #-----------
 
 print(os.getcwd())  # check current working directory for debug 
 
 
-# Data Preparation  
 
 
-# -----------------------------------------------------------------------------
+
+# --------------------
 # Useful functions 
-# -----------------------------------------------------------------------------
+# --------------------
 
 
 @contextmanager
+
+
 def timer(title):
     t0 = time.time()
     yield
@@ -61,6 +59,11 @@ def one_hot_encoder(df, nan_as_category = True):
     new_columns = [c for c in df.columns if c not in original_columns]
     return df  #, new_columns
 
+
+
+# -------------------
+# Data Preparation 
+# -------------------
 
 def get_resource_type(encode=False):
     resource_type= pd.read_csv( 'resource_type.csv', error_bad_lines=False, warn_bad_lines=False)
@@ -127,6 +130,28 @@ def get_test(encode=False):
 
 
 
+
+def get_event_type(encode =False):
+    event_type= pd.read_csv('event_type.csv', error_bad_lines=False, warn_bad_lines=False)
+    event_type.id=event_type.id.astype(object)
+    
+    if(encode):
+        event_type['event_type']= event_type['event_type'].str.replace('event_type ','')
+
+        cat_cols=['event_type']
+        non_cat_cols = [f for f in event_type.columns.values if f not in cat_cols]
+
+        df = one_hot_encoder(event_type[cat_cols])
+        event_type = pd.concat([event_type[non_cat_cols],df], axis=1, sort=False)
+
+    return event_type
+
+
+# ------------------------------------------------------
+#    Data binning on the log_features cat features 
+# ------------------------------------------------------
+
+
 def get_log_feature(encode =False):
     log_feature = pd.read_csv('log_feature.csv', error_bad_lines=False, warn_bad_lines=False)
     log_feature.id=log_feature.id.astype(object)
@@ -153,21 +178,7 @@ def get_log_feature(encode =False):
 
     return log_feature
 
-def get_event_type(encode =False):
-    event_type= pd.read_csv('event_type.csv', error_bad_lines=False, warn_bad_lines=False)
-    event_type.id=event_type.id.astype(object)
-    
-    if(encode):
-        event_type['event_type']= event_type['event_type'].str.replace('event_type ','')
-
-        cat_cols=['event_type']
-        non_cat_cols = [f for f in event_type.columns.values if f not in cat_cols]
-
-        df = one_hot_encoder(event_type[cat_cols])
-        event_type = pd.concat([event_type[non_cat_cols],df], axis=1, sort=False)
-
-    return event_type
-
+# same thing can be applied on the other tables ¯\(ツ)/¯
 
 
 
@@ -284,9 +295,9 @@ def optimize(random_state=1235):
 
 
 
-# -----------------------------------------------------------------------------
-# train xgboost model with defined parameters or with default params (defined by me) 
-# -----------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------------
+# train xgboost model with tuning parameters or with default ones (chosen by me after the first tuning iteration)
+# ---------------------------------------------------------------------------------------------------------------------
 
 
 def train_single_classifier(params):   # train "optimal" model after hyperparams tuning 
