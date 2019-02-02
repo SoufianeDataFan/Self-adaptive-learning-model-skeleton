@@ -17,8 +17,8 @@ if __name__ == "__main__":
 'predictor':'gpu_predictor'
 ```
 
- - The script is commented as much as possible so you can easily edit it and . Optimization space can be changed, and the Xgboost can be replaced by lightGBM and other algs. 
-
+ - The script is commented as much as possible so you can easily edit it.
+ - Feel free to change the optimization space , and/or replace the Xgboost  by other algs such us `lightGBM`. 
  - The script is clear and easy to edit. The main modeling pipeline is already set up, and you can easily adjust it for your own data. 
  
 
