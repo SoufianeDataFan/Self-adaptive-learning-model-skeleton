@@ -1,6 +1,6 @@
 # Quick Start
 
- - Start from the function main to add directory and choose to turnon/off the automatic model tuning. 
+ - Start from the function main to add a directory and choose to turn on/off the automatic model tuning. 
  
 ```
 if __name__ == "__main__":
@@ -18,7 +18,7 @@ if __name__ == "__main__":
 ```
 
  - The script is commented as much as possible so you can easily edit it.
- - Feel free to change the optimization space and replace the `Xgboost`  by other algs such us `lightGBM`. (look for another post of mine about lightbm soon ;) )
+ - Feel free to change the optimization space and replace the `Xgboost`  by other algs such us `lightGBM`. (look for another post of mine about lightgbm soon ;) )
  - The script is clear and easy to edit. The main modeling pipeline is already set up, and you can easily adjust it for your own data. 
  
 
