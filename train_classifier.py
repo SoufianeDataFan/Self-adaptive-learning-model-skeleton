@@ -1,18 +1,18 @@
 
 # -----------------------------------------------------------------------------------------
-    # Created by Soufiane CHAMI      # Kaggle Telstra Network Disruptions challenge 
+    # Created by Soufiane CHAMI      # Network Disruptions 
 # ---------------------------------------------------------------------------------------
 
 
 
 import os 
 import pickle
+from contextlib import contextmanager
 import pandas as pd 
 import numpy as np
 import datetime
 import gc
 import time
-from contextlib import contextmanager
 
 # Machine learning
 
@@ -28,9 +28,9 @@ warnings.filterwarnings("ignore")
     
     
     
-# ----------
-# Data_Prep 
-#-----------
+# ---------------------------------------------------------------
+# Data_Preparation 
+#----------------------------------------------------------------
 
 print(os.getcwd())  # check current working directory for debug 
 
@@ -62,7 +62,7 @@ def one_hot_encoder(df, nan_as_category = True):
 
 
 # -------------------
-# Data Preparation 
+# Data Prep
 # -------------------
 
 def get_resource_type(encode=False):
@@ -257,7 +257,7 @@ def score(params):
 
 
 # -----------------------------------------------------------------------------
-# find best model parameters in the search space 
+# Sefl tuning: get the best model parameters within the search space 
 # -----------------------------------------------------------------------------
 
 
