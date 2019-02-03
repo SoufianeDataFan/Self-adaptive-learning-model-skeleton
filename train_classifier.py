@@ -29,7 +29,7 @@ warnings.filterwarnings("ignore")
     
     
 # ---------------------------------------------------------------
-# Data_Preparation 
+# Preparation 
 #----------------------------------------------------------------
 
 print(os.getcwd())  # check current working directory for debug 
@@ -60,10 +60,6 @@ def one_hot_encoder(df, nan_as_category = True):
     return df  #, new_columns
 
 
-
-# -------------------
-# Data Prep
-# -------------------
 
 def get_resource_type(encode=False):
     resource_type= pd.read_csv( 'resource_type.csv', error_bad_lines=False, warn_bad_lines=False)
