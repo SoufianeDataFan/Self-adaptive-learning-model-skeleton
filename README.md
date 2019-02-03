@@ -1,7 +1,7 @@
 
 # Quick Start : 
  
- - In the function 'main', add the inputs directory and select the training mode (turn on/off the automatic model tuning).
+ - Make sure you add the inputs directory and select the training mode (turn on/off the automatic model tuning).
 ```
 if __name__ == "__main__":
     INPUT_DIR='/path/to/inputs/directory/'
