@@ -1,19 +1,7 @@
 
-## Business perspective:
-
-Interruption of connectivity can happen due to the failure of some nodes in a telecommunication network. Ensuring reliable network connectivity is curial. It can harm the brand of the company if it happens repetitively. 
-For this purpose, maintenance engineers must conduct preventive actions periodically on different nodes of the network that are spread out throughout an expansive area. Prioritization is a key here !
-
-The challenge here for the maintenance managers is to prioritize the nodes with the highest fault severity level 1, 2, or 3 (imagine these nodes are in different locations, it's very time consuming). 
-
-This is a multi-class problem with a tricky dataset (The meaning of the features is not easily clear from the beginning unless you are experienced in the field). 
-
-This is a great classifier with a single model and automatic tuning pipeline and some features engineering techniques. 
-
-
-# Quick Start 
+# Quick Start : 
  
- - Start from the function main to add a directory and choose to turn on/off the automatic model tuning. 
+ - In the function 'main', add the inputs directory and select the training mode (turn on/off the automatic model tuning).
  
 ```
 if __name__ == "__main__":
@@ -23,7 +11,7 @@ if __name__ == "__main__":
         main(self_tuning= True) 
  
 ```
- - I recommend you run the training file on the GPU for faster evaluation. Otherwise, make sure you change computing settings before you start. 
+ - I recommend you use a GPU for faster evaluation. Otherwise, make sure you change computing settings before you start. 
  
 ```
 'tree_method':'gpu_hist', 
