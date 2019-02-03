@@ -1,7 +1,7 @@
 
 # Quick Start : 
  
- - Make sure you add the inputs directory and select the training mode (turn on/off the automatic model tuning).
+ - Make sure you add the inputs directory and you select the training mode before you run the classifier (turn on/off the automatic model tuning).
 ```
 if __name__ == "__main__":
     INPUT_DIR='/path/to/inputs/directory/'
