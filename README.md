@@ -2,7 +2,7 @@
 ## Business perspective:
 
 Interruption of connectivity can happen due to the failure of some nodes in a telecommunication network. Ensuring reliable network connectivity is curial. It can harm the brand of the company if it happens repetitively. 
-For this purpose, maintenance engineers must conduct preventive actions periodically on different nodes of the network that are spread out throughout an expansive area. Tasks prioritatzation is a key here !
+For this purpose, maintenance engineers must conduct preventive actions periodically on different nodes of the network that are spread out throughout an expansive area. Prioritization is a key here !
 
 The challenge here for the maintenance managers is to prioritize the nodes with the highest fault severity level 1, 2, or 3 (imagine these nodes are in different locations, it's very time consuming). 
 
