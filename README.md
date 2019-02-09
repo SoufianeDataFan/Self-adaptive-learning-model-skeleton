@@ -35,3 +35,8 @@ For this purpose, maintenance engineers must conduct preventive actions periodic
 
 [Go to repository ](https://www.kaggle.com/c/telstra-recruiting-network/data/).
 
+
+## Bug Fixes:
+Please feel free to send me an email if you encountered any bugs or errors. 
+
+
